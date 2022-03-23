@@ -138,7 +138,7 @@ class APIClient(object):
 
 	def put(self, path : str, **kwargs):
 		cookies = {"EAIT_WEB": self.__auth.cookie}
-		return self.__sess.post('https://' + self.__endpoint + path,
+		return self.__sess.put('https://' + self.__endpoint + path,
 		    cookies = cookies, **kwargs)
 
 	def patch(self, path : str, **kwargs):
